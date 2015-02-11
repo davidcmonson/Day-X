@@ -7,8 +7,6 @@
 //
 
 #import "DXAppDelegate.h"
-//#import "PMViewController.h"
-#import "DetailViewController.h"
 
 @implementation DXAppDelegate
 
@@ -16,19 +14,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
-//    PMViewController *viewController = [PMViewController new];
-//    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:viewController];
-//    self.window.rootViewController = navController;
-//    
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
-    
-    DetailViewController *viewController = [DetailViewController new];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.window.rootViewController = navController;
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
