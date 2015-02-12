@@ -49,11 +49,9 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-    [self save:textView];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    [self save:textField];
 }
 
 - (IBAction)clear:(id)sender {
