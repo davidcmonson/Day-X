@@ -7,7 +7,7 @@
 //
 
 #import "DXDetailViewController.h"
-#import "Entry.h"
+#import "EntryController.h"
 
 @interface DXDetailViewController () <UITextFieldDelegate, UITextViewDelegate>
 
@@ -21,13 +21,24 @@
 
 @implementation DXDetailViewController
 
+- (void)updateWithEntry:(Entry *)entry {
+    self.entry = entry;
+    
+    self.textField.text = self.entry.title;
+    self.textView.text = self.entry.text;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     self.textField.delegate = self;
     self.textView.delegate = self;
     
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
+    self.textField.text = self.entry.title;
+    self.textView.text = self.entry.text;
+    
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(save:)];
+                                   
     self.navigationItem.rightBarButtonItem = saveButton;
 
 }
@@ -53,19 +64,27 @@
 }
 
 - (IBAction)save:(id)sender {
-
-    if (!self.entry) {
-        self.entry = [[Entry alloc] init];
-        self.entry.title = self.textField.text;
-        self.entry.text = self.textView.text;
+    
+    Entry *entry = [[Entry alloc] initWithDictionary:@{titleKey: self.textField.text, textKey: self.textView.text}];
+    
+    if (self.entry) {
+        [[EntryController sharedInstance] replaceEntry:self.entry withEntry:entry];
+    } else {
+        [[EntryController sharedInstance] addEntry:entry];
     }
-    
-    NSMutableArray *entries = [Entry loadEntriesFromDefaults];
-    [entries addObject:self.entry];
-    
-    [Entry storeEntriesInDefaults:entries];
-    
+   
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
+
 @end
+
+
+
+
+
+
+
+
+

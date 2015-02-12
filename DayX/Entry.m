@@ -8,7 +8,7 @@
 
 #import "Entry.h"
 
-static NSString * const entriesKey = @"entries";
+//static NSString * const entriesKey = @"entries";
 
 @implementation Entry
 
@@ -39,36 +39,10 @@ static NSString * const entriesKey = @"entries";
 
 }
 
-- (NSString *)description {
-    return self.title;
-}
+//- (NSString *)description {
+//    return self.title;
+//}
 
-+ (NSMutableArray *)loadEntriesFromDefaults {
-    
-    NSArray *entryDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:entriesKey];
-    
-    NSMutableArray *entries = [NSMutableArray new];
-    
-    for (NSDictionary *entryDictionary in entryDictionaries) {
-        Entry *entry = [[Entry alloc] initWithDictionary:entryDictionary];
-        [entries addObject:entry];
-    }
-    
-    return entries;
-}
-
-+ (void)storeEntriesInDefaults:(NSArray *)entries {
-    
-    NSMutableArray *entryDictionaries = [NSMutableArray new];
-    
-    for (Entry *entry in entries) {
-        [entryDictionaries addObject:[entry entryDictionary]];
-    }
-    
-    
-    [[NSUserDefaults standardUserDefaults] setObject:entryDictionaries forKey:entriesKey];
-    
-}
 
 
 @end
