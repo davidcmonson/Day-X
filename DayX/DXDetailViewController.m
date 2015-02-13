@@ -61,7 +61,7 @@
     [self save:sender];
 }
 
-- (IBAction)save:(id)sender {
+- (void)save:(id)sender {
     
     Entry *entry = [[Entry alloc] initWithDictionary:@{titleKey: self.textField.text, textKey: self.textView.text}];
     

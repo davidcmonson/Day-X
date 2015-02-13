@@ -10,6 +10,7 @@
 #import "DXListTableViewDataSource.h"
 #import "DXDetailViewController.h"
 #import "EntryController.h"
+#import "DetailContainerViewController.h"
 
 @interface DXListViewController () <UITableViewDelegate>
 
@@ -45,9 +46,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     DXDetailViewController *detailViewController = [DXDetailViewController new];
-    [detailViewController updateWithEntry:[[EntryController sharedInstance].entries objectAtIndex:indexPath.row]];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+    DetailContainerViewController *detailPageViewController = [DetailContainerViewController new];
+    [detailViewController updateWithEntry:[EntryController sharedInstance].entries[indexPath.row]];
+    [self.navigationController pushViewController:detailPageViewController animated:YES];
+    
+    //detailPageViewController.initialIndex = indexPath.row;
+    
+    
+    
+    
+    
+    //[self.navigationController pushViewController:detailViewController animated:YES];
+    
+    
+    
+    
 }
 
 - (void)add:(id)sender {

@@ -25,6 +25,8 @@
 		71B57C4919C758CB00EF6AE3 /* DXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B57C4719C758CB00EF6AE3 /* DXDetailViewController.m */; };
 		71B57C4A19C758CB00EF6AE3 /* DXDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B57C4819C758CB00EF6AE3 /* DXDetailViewController.xib */; };
 		DA9D0C821A8C020A004E6ED9 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9D0C811A8C020A004E6ED9 /* EntryController.m */; };
+		DAF30F071A8D573300304A99 /* DetailPageViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF30F061A8D573300304A99 /* DetailPageViewControllerDataSource.m */; };
+		DAF30F0A1A8D62E700304A99 /* DetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF30F091A8D62E700304A99 /* DetailContainerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		71B57C4819C758CB00EF6AE3 /* DXDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DXDetailViewController.xib; sourceTree = "<group>"; };
 		DA9D0C801A8C020A004E6ED9 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntryController.h; path = ../EntryController.h; sourceTree = "<group>"; };
 		DA9D0C811A8C020A004E6ED9 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntryController.m; path = ../EntryController.m; sourceTree = "<group>"; };
+		DAF30F051A8D573300304A99 /* DetailPageViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPageViewControllerDataSource.h; sourceTree = "<group>"; };
+		DAF30F061A8D573300304A99 /* DetailPageViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPageViewControllerDataSource.m; sourceTree = "<group>"; };
+		DAF30F081A8D62E700304A99 /* DetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailContainerViewController.h; sourceTree = "<group>"; };
+		DAF30F091A8D62E700304A99 /* DetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,10 @@
 				71B57C4619C758CB00EF6AE3 /* DXDetailViewController.h */,
 				71B57C4719C758CB00EF6AE3 /* DXDetailViewController.m */,
 				71B57C4819C758CB00EF6AE3 /* DXDetailViewController.xib */,
+				DAF30F051A8D573300304A99 /* DetailPageViewControllerDataSource.h */,
+				DAF30F061A8D573300304A99 /* DetailPageViewControllerDataSource.m */,
+				DAF30F081A8D62E700304A99 /* DetailContainerViewController.h */,
+				DAF30F091A8D62E700304A99 /* DetailContainerViewController.m */,
 				4FF7BCEC1A688B9F007AB98B /* DXListViewController.h */,
 				4FF7BCED1A688B9F007AB98B /* DXListViewController.m */,
 				4FF7BCEF1A688B9F007AB98B /* DXListTableViewDataSource.h */,
@@ -283,6 +293,8 @@
 				711A507A19388095005642EF /* DXAppDelegate.m in Sources */,
 				DA9D0C821A8C020A004E6ED9 /* EntryController.m in Sources */,
 				711A507619388095005642EF /* main.m in Sources */,
+				DAF30F071A8D573300304A99 /* DetailPageViewControllerDataSource.m in Sources */,
+				DAF30F0A1A8D62E700304A99 /* DetailContainerViewController.m in Sources */,
 				71B57C4919C758CB00EF6AE3 /* DXDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

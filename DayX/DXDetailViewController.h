@@ -16,4 +16,6 @@ static NSString * const EntryKey = @"entry";
 
 - (void)updateWithEntry:(Entry *)entry;
 
+@property (nonatomic, assign)NSInteger index;
+
 @end

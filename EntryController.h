@@ -13,6 +13,7 @@
 
 @property (nonatomic , strong, readonly)NSArray * entries;
 
+
 + (EntryController *)sharedInstance;
 - (void)addEntry:(Entry *)entry;
 - (void)removeEntry:(Entry *)entry;
